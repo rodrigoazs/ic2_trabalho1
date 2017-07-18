@@ -149,7 +149,7 @@ for i in range(10):
     skf = StratifiedKFold(n_splits = 10, shuffle=True)
     for train, test in skf.split(X, y):
         X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]
-        classifier = KNeighborsClassifier(n_neighbors=10)
+        classifier = KNeighborsClassifier(n_neighbors=3)
         classifier.fit(X_train, y_train)
         y_pred = classifier.predict(X_test)
         y_prob = classifier.predict_proba(X_test)
