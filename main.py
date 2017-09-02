@@ -7,6 +7,8 @@ Created on Fri Jul  7 18:18:44 2017
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d, Axes3D #<-- Note the capitalization! 
 
 # Importing the dataset
 dataset = pd.read_table('data.txt')
@@ -50,11 +52,11 @@ plt.scatter(X[:, 0], X[:, 2], marker='o', c=y)
 
 plt.subplot(325)
 plt.title("Glicemia sérica em jejum", fontsize='small')
-plt.boxplot(X[:, 1])
+plt.boxplot(X[:, 2])
 
 plt.subplot(326)
 plt.title("Idade x Glicemia sérica em jejum", fontsize='small')
 plt.scatter(X[:, 1], X[:, 2], marker='o', c=y)
 
-
-
+#- 1 purple
+# 1 yellow
